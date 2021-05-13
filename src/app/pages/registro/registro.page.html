@@ -1,9 +1,31 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+
+    <!-- <ion-buttons slot="start">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>        
+      </ion-button>
+    </ion-buttons> -->
+
+    <ion-buttons slot="end">
+      <ion-button routerLink="/login">Iniciar sesión</ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div id="header">
+    <h1>Registro</h1>
+    <img src="assets/images/logo.jpg" alt="">
+  </div>
+
+  <form id="formulario">
+    <app-input placeholder="Nombre" type="text"></app-input>
+    <app-input placeholder="Email" type="email"></app-input>
+    <app-input placeholder="Contraseña" type="password"></app-input>    
+
+    <ion-button expand="block" shape="round">Registrarse</ion-button>
+  </form>
 
 </ion-content>
