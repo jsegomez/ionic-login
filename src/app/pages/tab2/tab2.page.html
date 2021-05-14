@@ -1,16 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="false">
+  <ion-toolbar color="primary" type="ios">
     <ion-title>
-      Tab 2
+      Lista de usuarios
     </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
- 
+
+  <ion-list>
+    <ion-list-header>
+      Lista de usuarios registrados
+    </ion-list-header>
+
+    <ion-item *ngFor="let user of usuarios">
+      <ion-avatar slot="start">
+        <img src="assets/images/image.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ user.name }}</h2>
+        <h3>{{ user.email }}</h3>        
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+
 </ion-content>

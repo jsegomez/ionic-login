@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlAuth: 'https://login-app-jsegomez.herokuapp.com/api/auth'
 };

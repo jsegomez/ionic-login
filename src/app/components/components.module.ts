@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular';
 
 // Componentes
 import { InputComponent } from './input/input.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { InputComponent } from './input/input.component';
   imports: [
     CommonModule,
     IonicModule,
+    ReactiveFormsModule
   ],
   exports: [
     InputComponent

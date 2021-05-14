@@ -1,16 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header [translucent]="false">
+  <ion-toolbar color="primary" type="ios">
     <ion-title>
-      Tab 1
+      Mi espacio
     </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" *ngIf="user" class="ion-margin">
+  <ion-text color="primary">
+    <h2>{{ user.name }}</h2>
+  </ion-text>
+
+  <div align="center">
+    <img src="assets/images/image.png" />
+  </div>
+
+  <ion-list>
+    <ion-list-header>Datos</ion-list-header>
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-badge slot="end">{{ user.name }}</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>Correo:</ion-label>
+      <ion-badge color="secondary" slot="end">{{ user.email }}</ion-badge>
+    </ion-item>
+  </ion-list>
   
 </ion-content>

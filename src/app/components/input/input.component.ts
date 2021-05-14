@@ -10,6 +10,6 @@ export class InputComponent{
   constructor() { }  
 
   @Input() type: string = '';
-  @Input() placeholder: string = '';
+  @Input() placeholder: string = '';  
 
 }
